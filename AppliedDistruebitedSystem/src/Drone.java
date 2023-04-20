@@ -12,7 +12,7 @@ public class Drone {
     // Declare Variables 
     private int droneID;
     private String droneName;
-    private String droneIntialPosition;
+    private String droneIntialPosition = "(0,0)";// setting for intial posistion 
     
     
     // Constructor 
