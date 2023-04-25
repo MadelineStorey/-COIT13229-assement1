@@ -47,39 +47,42 @@ public class Client
                         System.out.println(" Enter fire location :");
                         String fireLocation = sa.nextLine();
                         
-           // features needed on the client side 
+                     
 
    }catch (UnknownHostException e){System.out.println("Socket:"+e.getMessage());
 		}catch (EOFException e){System.out.println("EOF:"+e.getMessage());
 		}catch (IOException e){System.out.println("readline:"+e.getMessage());
-		}catch(ClassNotFoundException ex){
-					 ex.printStackTrace();
 		}finally {if(s!=null) try {s.close();}catch (IOException e){System.out.println("close:"+e.getMessage());}}
      }
-}
-
-   
-}
-
- 
-   void moveDrone() 
-            {}
+void moveDrone() 
+            {
+            System.out.println(" Please enter the location of the drone"); 
+             Scanner s=new Scanner(System.in);
+            String p= s.nextLine();
+           
+            Drone.setDroneIntialPosition(p); // not sure where I went wrong here  but something happened 
+             
+            }
    void registerDrone()
    {}
    void returnDroneToBase()
            {
-                
-            }
+            final String BASE = "(0,0)";
+            Drone.setDroneIntialPosition(BASE); // Still don't know where I went wrong
+            
+           }
    void fireReport()
-   {}
+   {
+       
+   }
   void  deleteFireReport()
   {}
   void  exitServerApp(){
   returnDroneToBase();
-  }
+}}
   
            
-            }
+            
                         
    
     
